@@ -1,0 +1,121 @@
+.h1{
+text-align: center;
+background-color: white;
+font-family: Rod;
+color: #990000;
+height: 150px;
+max-width: 100%;
+
+}
+h2{
+  color:#990000; 
+}
+footer{
+  text-align: center;
+  color: #d9d9d9;
+  background-color:#222; 
+  max-width: 100%;
+  text-decoration: none;
+  min-height: auto;
+  padding-bottom: auto;
+
+
+}
+ul li{
+  text-decoration: none;
+  list-style-type: none;
+  display: inline;
+  color: white;
+  
+}
+hover1 {
+   text-decoration:none;
+}
+.nav1{
+	     font-size: 20px;
+    max-width: 100%;
+  }
+
+input[type=text] {
+    width: 230px;
+    color: black;
+    height: 40px;
+    border: 2px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;  
+}
+
+input[type=email] {
+    width: 230px;
+    color: black;
+    height: 40px;
+    border: 2px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;  
+}
+
+input , select[type=password] {
+    width: 230px;
+    color: black;
+    height: 40px;
+    border: 2px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;  
+}
+.select{
+
+	width: 230px;
+	height: 40px; 
+	color:black; 
+  border: 2px solid #ccc;
+	border-radius:3px;
+	background-color: white;
+  font-size: 16px;
+}
+.a1{
+	color: white;
+	font-size: 20px;
+  text-decoration: none;
+}
+.a2{
+  color: #990000;
+  font-size: 20px;
+  text-decoration: none;
+}
+.jumbotron1 {
+      background-color: #f4511e;
+      color: #fff;
+      max-width: 100%
+  }
+  .logo-small {
+      color: #f4511e;
+      font-size: 50px;
+  }
+  .logo {
+      color: #f4511e;
+      font-size: 200px;
+  }
+ 
+  .p1{
+    text-align: center;
+    font-family: Edwardian Script ITC;
+    color:#562929;
+    font-size: 40px;
+  }
+  
+.container
+      {
+        position: relative;
+       
+      }
+.active{
+  background-color: white;
+}
+a:link {
+    color: white;
+}
+body
+{
+min-height:80%;
+
+}
