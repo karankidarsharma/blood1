@@ -137,7 +137,7 @@ if( y == ""){
        <li><a href="../profile.php">Edit your profile</a></li>
       <li><a href="../refer.php">Refer A Friend</a></li>
       <li><a href="../contact.php">Contact Us</a></li>
-       <li><a href="privacy.php">Privacy</a></li>
+       <li><a href="../privacy.php">Privacy</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li><a href="../register.php"><span class="glyphicon glyphicon-user"></span> Register Here!</a></li>

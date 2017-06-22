@@ -1,6 +1,9 @@
 
 <html>
-<div style="background-color:grey; width:100%; height:100%;">
+<header style="width:100%; height:40px; border-bottom: 
+1px dashed; color:#990000; text-align:center; font-size:40px;margin-bottom:20px; padding-bottom:20px; font-family:ROD;">
+	For Full Information Contact Us:0224154321</header>
+<div style="background-color:white; width:100%; height:100%;">
 <table>
 <?php 
 $a=$_REQUEST['select1'];
