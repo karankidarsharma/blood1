@@ -1,5 +1,7 @@
 <?php
-define('MyConst', TRUE);
+ session_start();
+
+
 ?>
 <html>
 <title>blood</title>
@@ -245,12 +247,20 @@ setTimeout("window.close();", 3000);
   <h1 style="text-align:center;"> <strong>Register For Free!</strong></h1>
   <?php
   if(isset($_GET['success']) && $_GET['success'] == 'record/created successfully')
-      {
-         
+      {session_start();
+
+        session_destroy();
+
+        session_start();
+         $_SESSION["count"]=$_SESSION["count"]+1;
+        if($_SESSION["count"]>1){
+          header('location:register.php');
+          exit();
+        }
+
         //echo "<a style='color:#990000;'>.</a>";
 
 echo '<div class="alert alert-danger" role="alert"  style="width:auto;">
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
   <strong>Record created successfully!</strong>
 </div>';
 
@@ -265,7 +275,6 @@ echo '<div class="alert alert-danger" role="alert"  style="width:auto;">
         //echo "<a style='color:#990000;'>.</a>";
 
 echo '<div class="alert alert-danger" role="alert"  style="width:auto;">
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
   <strong>Email Already Registered!</strong>
 </div>';
 
@@ -278,15 +287,15 @@ echo '<div class="alert alert-danger" role="alert"  style="width:auto;">
 </br>
   
    &nbsp&nbsp  <label >*First Name:</label>
-    <input type="text" id="text1" name="text1" value="">
+    <input type="text" id="text1" name="text1" maxlength="25" value="<?php   echo $_SESSION["fname"]; ?>">
   <p id="e1"></p>
    </br>
    &nbsp&nbsp&nbsp<label >*Last Name:</label>
-    <input type="text" id="text2" name="text2">
+    <input type="text" id="text2" name="text2"  maxlength="25" value="<?php   echo $_SESSION["lname"]; ?>">
   <p id="e2"></p>
    </br>
   &nbsp&nbsp&nbsp&nbsp  <label >*Phone No:</label>
-    <input type="text" id="text3" name="text3">
+    <input type="text" id="text3" name="text3"  maxlength="11" value="<?php   echo $_SESSION["ph"]; ?>">
   <p id="e3"></p>
    </br>
    &nbsp&nbsp&nbsp<label for="select2">Choose city:</label>
@@ -322,12 +331,12 @@ echo '<div class="alert alert-danger" role="alert"  style="width:auto;">
             </br>
      
    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <label >*Email:</label>
-    <input type="email" id="email" name="email">
+    <input type="email" id="email"  maxlength="40" name="email">
  <p id="e5"></p>
   </br>
   
     &nbsp&nbsp&nbsp&nbsp&nbsp<label >*Password:</label>
-    <input type="password" id="password" name="password" >
+    <input type="password" id="password"  maxlength="20" name="password" >
   <p id="e6"></p>
 </br>
 

@@ -29,6 +29,10 @@ $result=mysqli_query($con, $query);
   }
  if($em == $f)
 {
+  $_SESSION['fname']=$a;
+         $_SESSION['lname']=$b;
+         $_SESSION['ph']=$c;
+         
 	header('location:register.php?success=error existing user');
 }
 
@@ -41,11 +45,15 @@ else{
 $query="INSERT INTO user( fname, lname, ph_no, city, blood_group, email, password) VALUES ('$a','$b','$c','$d','$e','$f','$g')";
 
 if(mysqli_query($con, $query)) {
+       
        header('location:register.php?success=record/created successfully');
       
 }else{
 
+
+
         echo "Error: " .$query . "<br>" . mysqli_error($con);
+
 }
 }
 mysqli_close($con);
